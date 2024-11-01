@@ -1,7 +1,7 @@
 # FrontendFinalProject
 
 - An elevator pitch of your project (something you can say in less than 1 minute)
-  - It will be an app for adopting pets. The user will be able to sign into the platform and view all the possible pets to adopt. They will be able to filter based on animal, breed, age, etc. Potentially, adding real time messaging platform for pet owners and people that are interested using websockets. They will also be able to fill out and submit a form to adopt one of the pets. If you're a pet owner, you will be able to keep track of the appliations submitted for your pets, as well as adding new pets with picture of them. Potentially it could use google maps API in order to show the location of the shelters or whatever information.
+  - It will be an app for adopting pets. The user will be able to sign into the platform and view all the possible pets to adopt. They will be able to filter based on animal, breed, age, etc. Potentially, adding real time messaging platform between pet owners and people that are interested, using websockets. They will be able to fill out and submit a form to adopt one of the pets. If you're a pet owner, you will be able to keep track of the appliations submitted for your pets, as well as adding new pets with picture of them. Potentially it could use google maps API in order to show the location of the shelters or whatever information.
   
 - The names of the contributors (if you are working with a partner)
   - Only me, Carlos
