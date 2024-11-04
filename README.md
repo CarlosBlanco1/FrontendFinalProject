@@ -20,3 +20,91 @@
 - A list of new things you will need to do to accomplish your project (e.g. websockets)
   - Web sockets for a real-life chat app between pet owners and interested people
   - Implementing Google Maps API to look at shelters near you
+
+ Overall Rubric:
+
+| Feature                                           | Score (/3) | Completed |
+|---------------------------------------------------|------------|-----------|
+| Use of Local Storage                              | []         | [ ]       |
+| Client side state stores (e.g., context or React Query) | []  | [ ]       |
+| Toasts / Global Notifications or Alerts           | []         | [ ]       |
+| Error Handling (both on API requests and render errors) | [] | [ ]       |
+| Network Calls                                     | []         | [ ]       |
+| - Read Data                                       | []         | [ ]       |
+| - Write Data                                      | []         | [ ]       |
+| WebSocket                                         | []         | [ ]       |
+| Developer Type Helping (TypeScript)               | []         | [ ]       |
+| 10+ Pages/Views via a Router                      | []         | [ ]       |
+| CI/CD Pipeline                                    | []         | [ ]       |
+| Live Production Environment                       | []         | [ ]       |
+| Automated Testing and Linting in the Pipeline (abort build if fails) | [] | [ ] |
+| 3+ Reusable Form Input Components                 | []         | [ ]       |
+| 4+ Reusable Layout Components                     | []         | [ ]       |
+| Authentication and User Account Support           | []         | [ ]       |
+| Authorized Pages and Public Pages                 | []         | [ ]       |
+
+Goals by Week:
+
+---
+
+## Due Nov 6 - Core Components and State Management
+| Feature                                           | Score (/3) | Completed |
+|---------------------------------------------------|------------|-----------|
+| Network Calls                                     | []         | [ ]       |
+| - Read Data                                       | []         | [ ]       |
+| - Write Data                                      | []         | [ ]       |
+| Error Handling (both on API requests and render errors) | [] | [ ]       |
+
+---
+
+## Due Nov 9 - Developer Support and Basic Interactivity
+| Feature                                           | Score (/3) | Completed |
+|---------------------------------------------------|------------|-----------|
+| 3+ Reusable Form Input Components                 | []         | [ ]       |
+| 4+ Reusable Layout Components                     | []         | [ ]       |
+| Client Side State Stores (e.g., context or React Query) | []  | [ ]       |
+| Use of Local Storage                              | []         | [ ]       |
+
+
+---
+
+## Due Nov 13 - Networking and Error Handling
+| Feature                                           | Score (/3) | Completed |
+|---------------------------------------------------|------------|-----------|
+| Developer Type Helping (TypeScript)               | []         | [ ]       |
+| Toasts / Global Notifications or Alerts           | []         | [ ]       |
+| Authentication and User Account Support           | []         | [ ]       |
+
+---
+
+## Due Nov 16 - Routing and Access Control
+| Feature                                           | Score (/3) | Completed |
+|---------------------------------------------------|------------|-----------|
+| 10+ Pages/Views via a Router                      | []         | [ ]       |
+| Authorized Pages and Public Pages                 | []         | [ ]       |
+| WebSocket (if applicable)                         | []         | [ ]       |
+
+---
+
+## Due Nov 20 - Production Readiness and CI/CD
+| Feature                                           | Score (/3) | Completed |
+|---------------------------------------------------|------------|-----------|
+| CI/CD Pipeline                                    | []         | [ ]       |
+| Automated Testing and Linting in the Pipeline (abort build if fails) | [] | [ ] |
+| Live Production Environment                       | []         | [ ]       |
+
+---
+
+## Due Nov 23 - Refactoring and Testing
+| Feature                                           | Score (/3) | Completed |
+|---------------------------------------------------|------------|-----------|
+| Final Testing and Error Handling Improvements     | []         | [ ]       |
+| Code Refactoring and Optimization                 | []         | [ ]       |
+
+---
+
+## Due Dec 4 - Final Review and Project Completion
+| Feature                                           | Score (/3) | Completed |
+|---------------------------------------------------|------------|-----------|
+| Documentation and Code Cleanup                    | []         | [ ]       |
+| Final Deployment and QA                           | []         | [ ]       |
