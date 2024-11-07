@@ -50,10 +50,13 @@ Goals by Week:
 ## Due Nov 6 - Core Components and State Management
 | Feature                                           | Score (/3) | Completed |
 |---------------------------------------------------|------------|-----------|
-| Network Calls                                     | []         | [ ]       |
-| - Read Data                                       | []         | [ ]       |
-| - Write Data                                      | []         | [ ]       |
-| Error Handling (both on API requests and render errors) | [] | [ ]       |
+| Network Calls                                     | [3]         | [X]       |
+| - Read Data                                       | [3]         | [X]       |
+| - Write Data                                      | [3]         | [X]       |
+| Error Handling (both on API requests and render errors) | [0] | [ ]       |
+
+Self Evaluation:
+- Everything went pretty well, I think I'm on the right track. The only thing I;m worried about is the separationof concerns between my server and client components. Specially with ahndling submissions, I'm not sure I'm doing it right.
 
 ---
 
