@@ -63,10 +63,12 @@ Self Evaluation:
 ## Due Nov 9 - Developer Support and Basic Interactivity
 | Feature                                           | Score (/3) | Completed |
 |---------------------------------------------------|------------|-----------|
-| 3+ Reusable Form Input Components                 | []         | [ ]       |
-| 4+ Reusable Layout Components                     | []         | [ ]       |
-| Client Side State Stores (e.g., context or React Query) | []  | [ ]       |
-| Use of Local Storage                              | []         | [ ]       |
+| 3+ Reusable Form Input Components                 | [3]         | [X]       |
+| 4+ Reusable Layout Components                     | [3]         | [X]       |
+| Client Side State Stores (e.g., context or React Query) | [3]  | [X]       |
+| Use of Local Storage                              | [3]         | [X]       |
+
+- Everything went pretty well, I think I'm on the right track. I thing I overestimated how many reusable components I was going to need. I just have a reusable text input component and a reusable select input component and that's all I'm gonna need honestly. I also made a context to access all the owners, adopters and pets. I was also able to interact with local storage. Lastly, I got my site deployed on kubernetes and got authentication working.
 
 
 ---
