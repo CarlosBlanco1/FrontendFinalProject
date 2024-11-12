@@ -24,7 +24,6 @@ export const postgresService = {
     return res.rows;
   },
   createOwner: async ({
-    id,
     firstName,
     lastName,
     email,
