@@ -1,0 +1,39 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: [self-hosted]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build Docker image
+        run: |
+          cd fureverfriends
+          docker build -t carlosblanco1/carlos-final-web:${{ github.run_number }} .
+
+      - name: Push Docker image
+        run: |
+          docker push carlosblanco1/carlos-final-web:${{ github.run_number }}
+
+      - name: Build Kubernetes
+        run: |
+          export TAG_ID=${{ github.run_number }}
+          kubectl -n carlos-final delete configmap db-schema-carlos-final || true
+          kubectl -n carlos-final create configmap db-schema-carlos-final --from-file=init.sql
+          for file in ./fureverfriends/kube/*.yml; do
+              echo "envsubst applying to $file"
+              cat $file | envsubst | kubectl apply -f -
+          done

@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: carlos-final
+  name: carlos-final-db-deployment
+  labels:
+    app: carlos-final-db
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: carlos-final-db
+  template:
+    metadata:
+      labels:
+        app: carlos-final-db
+    spec:
+      containers:
+      - name: db-container
+        image: postgres
+        env:
+        - name: POSTGRES_DB
+          value: postgres_db
+        - name: POSTGRES_USER
+          value: postgres_user
+        - name: POSTGRES_PASSWORD
+          value: postgres
+        volumeMounts:
+        - name: db-data
+          mountPath: /var/lib/postgresql/data
+        - name: schema-volume
+          mountPath: /docker-entrypoint-initdb.d
+        readinessProbe:
+          exec:
+            command:
+            - pg_isready
+            - "-U"
+            - postgres_user
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 5
+      volumes:
+      - name: db-data
+        persistentVolumeClaim:
+          claimName: carlos-final-db-pvc
+      - name: schema-volume
+        configMap:
+          name: db-schema-carlos-final

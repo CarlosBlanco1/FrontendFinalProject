@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: carlos-final
+  name: carlos-final-web-deployment
+  labels:
+    app: carlos-final-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: carlos-final-web
+  template:
+    metadata:
+      labels:
+        app: carlos-final-web
+    spec:
+      containers:
+        - name: carlos-final-web
+          image: carlosblanco1/carlos-final-web:${TAG_ID}
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          env:
+            - name: POSTGRES_DB
+              value: postgres_db
+            - name: POSTGRES_USER
+              value: postgres_user
+            - name: POSTGRES_PASSWORD
+              value: postgres
+            - name: POSTGRES_HOST
+              value: db-service
+            - name: POSTGRES_PORT
+              value: "5432"
+          readinessProbe:
+            tcpSocket:
+              port: 3000
+            initialDelaySeconds: 30
+            periodSeconds: 5
