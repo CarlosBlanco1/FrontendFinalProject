@@ -6,6 +6,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
+    <h1>Home</h1>
     <Link href="/ownersPage">
         <div className="flex flex-col items-center justify-center gap-4 bg-white shadow-md rounded-lg p-4">
           <Image

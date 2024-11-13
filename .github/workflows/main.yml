@@ -28,6 +28,12 @@ jobs:
         run: |
           docker push carlosblanco1/carlos-final-web:${{ github.run_number }}
 
+      - name: Run Tests
+        run: |
+          cd fureverfriends
+          npm install
+          npm run test
+
       - name: Build Kubernetes
         run: |
           export TAG_ID=${{ github.run_number }}
