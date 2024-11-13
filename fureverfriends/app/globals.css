@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "TitleFont";
+  src: url("./fonts/ennobled.ttf");
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;

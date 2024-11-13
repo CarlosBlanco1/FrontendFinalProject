@@ -9,8 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#d9c4a9"
+      },
+      fontFamily: {
+        title: ["TitleFont", "Arial", "Helvetica", "sans-serif"],
       },
     },
   },
