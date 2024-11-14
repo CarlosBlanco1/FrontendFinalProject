@@ -24,15 +24,15 @@ export const postgresService = {
     return res.rows;
   },
   createOwner: async ({
-    firstName,
-    lastName,
+    firstname,
+    lastname,
     email,
     phone,
     address,
   }: {
     id: string;
-    firstName: string;
-    lastName: string;
+    firstname: string;
+    lastname: string;
     email: string;
     phone: string;
     address: string;
@@ -43,7 +43,7 @@ export const postgresService = {
       values
         ($1, $2, $3, $4, $5)
       `,
-      [firstName, lastName, email, phone, address]
+      [firstname, lastname, email, phone, address]
     );
   },
 
