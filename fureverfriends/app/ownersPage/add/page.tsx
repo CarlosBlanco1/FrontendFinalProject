@@ -1,6 +1,6 @@
 "use server";
 
-import AddOwnerForm from "@/forms/AddOwnerForm";
+import AddOwnerForm from "@/app/forms/AddOwnerForm";
 import { createOwnerAction } from "@/useServerActions/ownerActions";
 
 export default async function AddOwnerPage() {

@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import * as jose from "jose";
 
 
-export async function validateAndGetEmail() {
+export async function validateAndGetUser() {
     const cookieStore = await cookies();
     const jwt = cookieStore.get("jwt_token")?.value;
   
@@ -33,7 +33,13 @@ export async function validateAndGetEmail() {
     //   );
     // }
   
-    return payload.email;
+    return {
+      id: payload.sub as string,
+      firstname: payload.given_name as string,
+      lastname: payload.family_name as string,
+      email: payload.email as string,
+      phone: payload.phone_number as string,
+    };
   }
   
 //   export async function userDoesNotExist(email: string) {

@@ -6,6 +6,7 @@ export default function NavBar() {
     <div className="flex gap-4 items-center bg-black">
         <NavItem text="Home" icon="/home.svg" link="/"/>
         <NavItem text="Owners" icon="/owners.svg" link="/ownersPage" />
+        <NavItem text="My Profile" icon="/profile.svg" link="/profile" />
         <LogInLogOut></LogInLogOut>
     </div>
   );

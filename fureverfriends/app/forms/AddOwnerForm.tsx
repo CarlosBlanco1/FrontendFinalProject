@@ -1,10 +1,17 @@
 "use client";
 
 import { Owner } from "@/app/models/Owner";
-import ReusableTextInput from "@/reusables/ReusableTextInput";
+import ReusableTextInput from "@/app/reusables/ReusableTextInput";
 import formToOwner from "@/transformers/formToOwner";
+import { useToastContext } from "../toasts/useToastContext";
+import { useRouter } from "next/navigation";
+
 
 export default function AddOwnerForm({handleSubmit}: {handleSubmit : (owner : Owner) => Promise<void>}) {
+
+  const toast = useToastContext();
+  const router = useRouter();
+  
   return (
     <>
       <form onSubmit={ async (event : React.FormEvent<HTMLFormElement>) => {
@@ -12,6 +19,8 @@ export default function AddOwnerForm({handleSubmit}: {handleSubmit : (owner : Ow
         event.preventDefault();
         const ownerToSubmit = formToOwner(event);
         await handleSubmit(ownerToSubmit)
+        toast.showToast("Owner added successfully", "success");
+        router.push("/ownersPage");
 
         }}>
         <ReusableTextInput

@@ -19,6 +19,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-oidc-context": "^3.2.0",
+    "react-router-dom": "^6.28.0",
     "testing-library": "^0.0.2",
     "vite-tsconfig-paths": "^5.1.2",
     "vitest": "^2.1.4"
