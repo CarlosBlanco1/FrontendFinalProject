@@ -76,9 +76,11 @@ Self Evaluation:
 ## Due Nov 13 - Networking and Error Handling
 | Feature                                           | Score (/3) | Completed |
 |---------------------------------------------------|------------|-----------|
-| Developer Type Helping (TypeScript)               | []         | [ ]       |
-| Toasts / Global Notifications or Alerts           | []         | [ ]       |
-| Authentication and User Account Support           | []         | [ ]       |
+| Developer Type Helping (TypeScript)               | [3]         | [X]       |
+| Toasts / Global Notifications or Alerts           | [3]         | [X]       |
+| Authentication and User Account Support           | [3]         | [X]       |
+
+-Everything went great, I was able to implement the toasts succesfully, also user account support by creating a profile page, I also added a lot of styles and icons to the page. I feel like I'm doing pretty good, I just need to implement more pages and also make sure my app design is correct. I feel like I can get things to work, but at this point, I also care about how I get things to work.
 
 ---
 
