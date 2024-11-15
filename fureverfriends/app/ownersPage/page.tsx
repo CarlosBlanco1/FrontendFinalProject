@@ -1,12 +1,12 @@
 "use server";
 
 import Link from "next/link";
-import { postgresService } from "../services/ownerService";
-import OwnersList from "./components/OwnersList";
+import PeopleList from "../../components/reusables/list/PeopleList";
+import { ownerService } from "@/services/ownerService";
 
 export default async function OwnersPage() {
 
-  const owners = await postgresService.getAllOwners();
+  const owners = await ownerService.getAllOwners();
 
   return (
     <div>
@@ -16,7 +16,7 @@ export default async function OwnersPage() {
           Add Owner
         </button>
       </Link>
-      <OwnersList owners={owners} />
+      <PeopleList people={owners} />
     </div>
   );
 }

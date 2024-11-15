@@ -1,7 +1,7 @@
 "use client";
 
-import { Owner } from "@/app/models/Owner";
-import ReusableTextInput from "@/app/reusables/ReusableTextInput";
+import { Owner } from "@/models/Owner";
+import ReusableTextInput from "@/components/reusables/input/ReusableTextInput";
 import formToOwner from "@/transformers/formToOwner";
 import { useToastContext } from "../toasts/useToastContext";
 import { useRouter } from "next/navigation";

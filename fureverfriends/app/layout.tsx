@@ -2,8 +2,8 @@
 
 import Providers from "@/authentication/Providers";
 import "./globals.css";
-import NavBar from "@/app/nav/NavBar";
-import ToastContextProvider from "./toasts/ToastContextProvider";
+import NavBar from "@/components/nav/NavBar";
+import ToastContextProvider from "../components/toasts/ToastContextProvider";
 
 export default function RootLayout({
   children,

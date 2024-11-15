@@ -9,7 +9,7 @@ const pool = new Pool({
   database: process.env.POSTGRES_DB,
 });
 
-export const postgresService = {
+export const ownerService = {
   getAllOwners: async () => {
     const res = await pool.query<Owner>(`
           select 
