@@ -9,6 +9,7 @@ export default function NavBar() {
         <NavItem text="Home" icon="/home.svg" link="/"/>
         <NavItem text="Owners" icon="/owners.svg" link="/ownersPage" />
         <NavItem text="Adopters" icon="/adopters.svg" link="/adoptersPage" />
+        <NavItem text="Pet Page" icon="/pet.svg" link="/petsPage"></NavItem>
         <NavItem text="My Profile" icon="/profile.svg" link="/profile" />
         <LogInLogOut></LogInLogOut>
     </div>

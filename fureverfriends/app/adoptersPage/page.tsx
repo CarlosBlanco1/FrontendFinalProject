@@ -1,4 +1,4 @@
-import PeopleList from "@/components/reusables/list/PeopleList";
+import PeopleList from "@/components/lists/PeopleList";
 import { adopterService } from "@/services/adopterService";
 
 export default async function AdoptersPage() {

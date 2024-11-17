@@ -17,6 +17,7 @@ CREATE TABLE Adopter (
 
 CREATE TABLE Pet (
     id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
     ownerId INT NOT NULL,
     animal VARCHAR(50) NOT NULL,
     breed VARCHAR(50),
@@ -49,13 +50,13 @@ VALUES
 ('Charlie', 'Brown', 'charlie@example.com', '111-222-3333'),
 ('Dana', 'White', 'dana@example.com', '444-555-6666');
 
-INSERT INTO Pet (ownerId, animal, breed, age, pictureUrl, description)
+INSERT INTO Pet (ownerId, animal, name, breed, age, pictureUrl, description)
 VALUES
-(1, 'dog', 'Labrador', 3, 'https://example.com/dog.jpg', 'Friendly and loves people'),
-(1, 'cat', 'Siamese', 2, 'https://example.com/cat.jpg', 'Curious and playful'),
-(2, 'rabbit', 'Dutch', 1, 'https://example.com/rabbit.jpg', 'Small, calm, and great for kids');
+(1, 'dog', 'Princess', 'Labrador', 3, 'https://example.com/dog.jpg', 'Friendly and loves people'),
+(1, 'cat', 'Tao', 'Siamese', 2, 'https://example.com/cat.jpg', 'Curious and playful'),
+(2, 'rabbit', 'Bugs', 'Dutch', 1, 'https://example.com/rabbit.jpg', 'Small, calm, and great for kids');
 
 INSERT INTO AdoptionApplication (petId, adopterId, ownerId, message, status, submittedAt)
 VALUES
 (1, 1, 1, 'I would love to adopt this Labrador!', 'pending', '2024-11-01 12:00:00'),
-(2, 2, 1, 'Very interested in adopting this Siamese cat.', 'pending', '2024-11-02 15:30:00');
+(2, 2, 1, 'Very interested in adopting Tao, he looks very cute', 'pending', '2024-11-02 15:30:00');

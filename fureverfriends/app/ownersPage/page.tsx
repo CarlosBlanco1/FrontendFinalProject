@@ -1,8 +1,8 @@
 "use server";
 
 import Link from "next/link";
-import PeopleList from "../../components/reusables/list/PeopleList";
 import { ownerService } from "@/services/ownerService";
+import PeopleList from "@/components/lists/PeopleList";
 
 export default async function OwnersPage() {
 

@@ -1,12 +1,13 @@
-// import { Pool } from "pg";
+import { Pet } from "@/models/Pet";
+import { Pool } from "pg";
 
-// const pool = new Pool({
-//   host: process.env.POSTGRES_HOST,
-//   port: parseInt(process.env.POSTGRES_PORT ?? "5432"),
-//   user: process.env.POSTGRES_USER,
-//   password: process.env.POSTGRES_PASSWORD,
-//   database: process.env.POSTGRES_DB,
-// });
+const pool = new Pool({
+  host: process.env.POSTGRES_HOST,
+  port: parseInt(process.env.POSTGRES_PORT ?? "5432"),
+  user: process.env.POSTGRES_USER,
+  password: process.env.POSTGRES_PASSWORD,
+  database: process.env.POSTGRES_DB,
+});
 
 
 // export const postgresService = {
@@ -48,24 +49,25 @@
 //       ]
 //     );
 //   },
-//   getAllUsers: async () => {
+
+export const petService = {
+  getAllPets: async () => {
     
-//     const res = await pool.query<DirectoryUser>(`
-//       select 
-//         id,
-//         first_name,
-//         last_name,
-//         phone,
-//         email,
-//         first_name_status,
-//         last_name_status,
-//         phone_status,
-//         email_status
-//       from directory_user
-//     `);
-//     return res.rows;
-//   },
-  
+    const res = await pool.query<Pet>(`
+      select 
+        id,
+        ownerId,
+        name,
+        animal,
+        breed,
+        age,
+        pictureUrl,
+        description
+      from Pet
+    `);
+    return res.rows;
+  }
+}
 //   editUser: async (userId: number, updatedUser: Partial<DirectoryUser>): Promise<DirectoryUser | null> => {
 //     // Ensure we are not updating the primary key
 //     if (updatedUser.id !== undefined) {
