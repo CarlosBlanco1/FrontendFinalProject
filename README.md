@@ -87,9 +87,9 @@ Self Evaluation:
 ## Due Nov 16 - Routing and Access Control
 | Feature                                           | Score (/3) | Completed |
 |---------------------------------------------------|------------|-----------|
-| 10+ Pages/Views via a Router                      | []         | [ ]       |
-| Authorized Pages and Public Pages                 | []         | [ ]       |
-| WebSocket (if applicable)                         | []         | [ ]       |
+| 10+ Pages/Views via a Router                      | [3]         | [X]       |
+| Authorized Pages and Public Pages                 | [3]         | [X]       |
+| WebSocket (if applicable)                         | [0]         | [ ]       |
 
 ---
 
