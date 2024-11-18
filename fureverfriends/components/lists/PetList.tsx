@@ -24,7 +24,7 @@ export default function PetList({ pets }: { pets: Pet[] }) {
                       Hello, my name is {pet.name}!
                     </span>
                     <span className="text-sm">
-                      I'm a {pet.breed} {pet.animal}
+                      I&apos;m a {pet.breed} {pet.animal}
                     </span>
                   </div>
                 </div>
