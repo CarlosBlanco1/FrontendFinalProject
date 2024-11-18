@@ -1,7 +1,7 @@
 export interface Pet {
   id: number;
   name: string;
-  ownerId: number;
+  ownerid: number;
   animal: string;
   breed: string;
   age: number;

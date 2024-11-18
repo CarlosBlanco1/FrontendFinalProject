@@ -5,7 +5,7 @@ import { ownerService } from "@/services/ownerService";
 
 type OwnerPageProps = Promise<{ ownerId: string }>;
 
-export default async function singleOwnerPage(props: {
+export default async function SingleOwnerPage(props: {
   params: OwnerPageProps;
 }) {
   const params = await props.params;
