@@ -96,9 +96,9 @@ Self Evaluation:
 ## Due Nov 20 - Production Readiness and CI/CD
 | Feature                                           | Score (/3) | Completed |
 |---------------------------------------------------|------------|-----------|
-| CI/CD Pipeline                                    | []         | [ ]       |
-| Automated Testing and Linting in the Pipeline (abort build if fails) | [] | [ ] |
-| Live Production Environment                       | []         | [ ]       |
+| CI/CD Pipeline                                    | [3]         | [X]       |
+| Automated Testing and Linting in the Pipeline (abort build if fails) | [3] | [X] |
+| Live Production Environment                       | [3]         | [X]       |
 
 ---
 
