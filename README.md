@@ -105,8 +105,8 @@ Self Evaluation:
 ## Due Nov 23 - Refactoring and Testing
 | Feature                                           | Score (/3) | Completed |
 |---------------------------------------------------|------------|-----------|
-| Final Testing and Error Handling Improvements     | []         | [ ]       |
-| Code Refactoring and Optimization                 | []         | [ ]       |
+| Final Testing and Error Handling Improvements     | [2]         | [X]       |
+| Code Refactoring and Optimization                 | [2]         | [X]       |
 
 ---
 
