@@ -110,6 +110,15 @@ Self Evaluation:
 
 ---
 
+---
+
+## Due Nov 26 - Styles
+| Feature                                           | Score (/3) | Completed |
+|---------------------------------------------------|------------|-----------|
+| Working on Styles    | [2]         | [X]       |
+
+---
+
 ## Due Dec 4 - Final Review and Project Completion
 | Feature                                           | Score (/3) | Completed |
 |---------------------------------------------------|------------|-----------|
