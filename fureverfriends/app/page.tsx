@@ -3,8 +3,13 @@
 export default function Home() {
   return (
     <>
-      <div className="bg-[url('/pets.jpg')] bg-cover bg-center bg-no-repeat h-full transition ease-in-out">
-        <h1 className="text-white text-9xl font-title absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">Furever Friends</h1>
+      <div className="h-full transition ease-in-out">
+        <video autoPlay loop muted width="100%">
+          <source src="./FrontPage.mp4" type="video/mp4" />
+        </video>
+          <h1 className="text-black text-9xl font-title absolute left-1/2 top-[70%] -translate-x-1/2 -translate-y-1/2">
+            Furever Friends
+          </h1>
       </div>
     </>
   );

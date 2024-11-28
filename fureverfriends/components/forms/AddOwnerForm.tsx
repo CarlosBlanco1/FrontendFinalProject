@@ -22,7 +22,8 @@ export default function AddOwnerForm({handleSubmit}: {handleSubmit : (owner : Ow
         toast.showToast("Owner added successfully", "success");
         router.push("/ownersPage");
 
-        }}>
+        }}
+        className="bg-white flex flex-col gap-4 py-8 px-9">
         <ReusableTextInput
           label="First Name"
           name="firstName"
@@ -48,7 +49,7 @@ export default function AddOwnerForm({handleSubmit}: {handleSubmit : (owner : Ow
           name="address"
           placeholder="123 Elm St, Springfield"
         />
-        <button type="submit">Add Owner</button>
+        <button className="bg-yellow-400 p-3 text-lg text-black rounded-lg" type="submit">Add Owner</button>
       </form>
     </>
   );
