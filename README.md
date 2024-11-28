@@ -96,17 +96,26 @@ Self Evaluation:
 ## Due Nov 20 - Production Readiness and CI/CD
 | Feature                                           | Score (/3) | Completed |
 |---------------------------------------------------|------------|-----------|
-| CI/CD Pipeline                                    | []         | [ ]       |
-| Automated Testing and Linting in the Pipeline (abort build if fails) | [] | [ ] |
-| Live Production Environment                       | []         | [ ]       |
+| CI/CD Pipeline                                    | [3]         | [X]       |
+| Automated Testing and Linting in the Pipeline (abort build if fails) | [3] | [X] |
+| Live Production Environment                       | [3]         | [X]       |
 
 ---
 
 ## Due Nov 23 - Refactoring and Testing
 | Feature                                           | Score (/3) | Completed |
 |---------------------------------------------------|------------|-----------|
-| Final Testing and Error Handling Improvements     | []         | [ ]       |
-| Code Refactoring and Optimization                 | []         | [ ]       |
+| Final Testing and Error Handling Improvements     | [2]         | [X]       |
+| Code Refactoring and Optimization                 | [2]         | [X]       |
+
+---
+
+---
+
+## Due Nov 26 - Styles
+| Feature                                           | Score (/3) | Completed |
+|---------------------------------------------------|------------|-----------|
+| Working on Styles    | [2]         | [X]       |
 
 ---
 
