@@ -61,11 +61,18 @@ export default function SinglePet({
             Contact <span className="font-medium">{petOwner?.firstname}</span>{" "}
             now!
           </h3>
-          <Link href={`/ownersPage/${petOwner?.id}`}>
-            <button className="px-6 py-2 bg-black text-white rounded-lg hover:bg-blue-700 transition">
-              Contact Owner
-            </button>
-          </Link>
+          <div className="flex flex-col gap-5">
+            <Link href={`/ownersPage/${petOwner?.id}`}>
+              <button className="px-6 py-2 bg-black text-white rounded-lg hover:bg-blue-700 transition">
+                Contact Owner
+              </button>
+            </Link>
+            <Link href={`/petAdoptionFormPage/${petToDisplay?.id}`}>
+              <button className="px-6 py-2 bg-black text-white rounded-lg hover:bg-blue-700 transition">
+                Adopt {petToDisplay.name}
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </>

@@ -10,8 +10,8 @@ const pool = new Pool({
 });
 
 export const adopterService = {
-    getAllAdopters: async () => {
-        const res = await pool.query<Adopter>(`
+  getAllAdopters: async () => {
+    const res = await pool.query<Adopter>(`
             select 
               id,
               firstName,
@@ -20,7 +20,26 @@ export const adopterService = {
               phone
             from Adopter
           `);
-        return res.rows;
-    },
-  
-}
+    return res.rows;
+  },
+  createAdopter: async ({
+    firstname,
+    lastname,
+    email,
+    phone
+  }: {
+    firstname: string;
+    lastname: string;
+    email: string;
+    phone: string;
+  }) => {
+    await pool.query(
+      `insert into Adopter
+          (firstName, lastName, email, phone) 
+        values
+          ($1, $2, $3, $4)
+        `,
+      [firstname, lastname, email, phone]
+    );
+  },
+};

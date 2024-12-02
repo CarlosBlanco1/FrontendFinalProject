@@ -3,27 +3,16 @@
 import { Owner } from "@/models/Owner";
 import ReusableTextInput from "@/components/reusables/input/ReusableTextInput";
 import formToOwner from "@/transformers/formToOwner";
-import { useToastContext } from "../toasts/useToastContext";
-import { useRouter } from "next/navigation";
+import { ReusableForm } from "../reusables/input/ReusableForm";
 
-
-export default function AddOwnerForm({handleSubmit}: {handleSubmit : (owner : Owner) => Promise<void>}) {
-
-  const toast = useToastContext();
-  const router = useRouter();
-  
+export default function AddOwnerForm({
+  handleSubmit,
+}: {
+  handleSubmit: (owner: Owner) => Promise<void>;
+}) {
   return (
     <>
-      <form onSubmit={ async (event : React.FormEvent<HTMLFormElement>) => {
-
-        event.preventDefault();
-        const ownerToSubmit = formToOwner(event);
-        await handleSubmit(ownerToSubmit)
-        toast.showToast("Owner added successfully", "success");
-        router.push("/ownersPage");
-
-        }}
-        className="bg-white flex flex-col gap-4 py-8 px-9">
+      <ReusableForm formTitle={"Add an owner"} onSubmitFunction={handleSubmit} serializeForm={formToOwner} successUrl={"ownersPage"}>
         <ReusableTextInput
           label="First Name"
           name="firstName"
@@ -49,8 +38,7 @@ export default function AddOwnerForm({handleSubmit}: {handleSubmit : (owner : Ow
           name="address"
           placeholder="123 Elm St, Springfield"
         />
-        <button className="bg-yellow-400 p-3 text-lg text-black rounded-lg" type="submit">Add Owner</button>
-      </form>
+      </ReusableForm>
     </>
   );
 }
