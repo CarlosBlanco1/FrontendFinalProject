@@ -16,7 +16,7 @@ export const NoRoleForm = async ({
   };
 }) => (
   <div>
-    <h2>You don't have a role, register as:</h2>
+    <h2>You don&apos;t have a role, register as:</h2>
     <form
       onSubmit={(e) => {
         e.preventDefault();

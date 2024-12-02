@@ -37,12 +37,12 @@ export default async function PetAdoptionFormPage(props: {
   catch(error)
   {
     return <>
-        <div>
-            <h2 className="bg-white text-black text-xl">You're not an adopter!</h2>
+        <div className="bg-white text-black">
+            <h2 className="text-xl">You&apos;re not an adopter!</h2>    
+            { error instanceof Error && (<div>{error.message}</div>)}
         </div>
     </>
   }
-
 
   return (
     <>

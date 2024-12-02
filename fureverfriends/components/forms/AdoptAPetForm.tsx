@@ -25,7 +25,7 @@ export default function AdoptAPetForm({
         serializeForm={(e: React.FormEvent<HTMLFormElement>) => {
           const formData = new FormData(e.currentTarget);
 
-          let application: AdoptionApplication = {
+          const application: AdoptionApplication = {
             applicationId: "0",
             petId: `${petToAdopt.id}`,
             adopterId: `${petAdopter.id}`,
