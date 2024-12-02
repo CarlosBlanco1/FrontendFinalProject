@@ -7,6 +7,6 @@ export default function formToApplication(
     message: ((formData.get("firstName") as string) +
       formData.get("firstName")) as string,
     status: "pending",
-    submittedAt: new (Date.now()),
+    submittedAt: new Date (Date.now()),
   };
 }
