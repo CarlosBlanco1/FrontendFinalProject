@@ -33,7 +33,7 @@ export const petService = {
       values
       ($1, $2, $3, $4, $5, $6, $7)
       `,
-      [pet.ownerid, pet.animal, pet.name, pet.breed, pet.age, pet.pictureUrl, pet.description]
+      [pet.ownerid, pet.animal, pet.name, pet.breed, pet.age, pet.pictureurl, pet.description]
     );
   },
 };
