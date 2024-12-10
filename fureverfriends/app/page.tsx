@@ -11,7 +11,7 @@ export default function Home() {
         <Image
           className="absolute left-1/2 top-[50%] -translate-x-1/2 -translate-y-1/2"
           src={"/fureverLogo.png"}
-          alt={"xd"}
+          alt={""}
           width={400}
           height={400}
           style={{ filter: "invert(1) brightness(200%) contrast(100%)" }}

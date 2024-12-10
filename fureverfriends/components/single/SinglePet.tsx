@@ -54,6 +54,8 @@ export default function SinglePet({
               src={petToDisplay.pictureurl || "/default-pet.jpg"}
               alt={petToDisplay.name}
               className="w-96 h-96 object-cover rounded-lg shadow-lg"
+              width={80}
+              height={80}
             />
           </div>
 
