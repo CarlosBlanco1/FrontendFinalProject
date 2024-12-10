@@ -4,7 +4,6 @@ import { Owner } from "@/models/Owner";
 import { Pet } from "@/models/Pet";
 import Link from "next/link";
 import { useEffect } from "react";
-import Image from 'next/image'
 
 export default function SinglePet({
   petToDisplay,
@@ -50,12 +49,10 @@ export default function SinglePet({
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex justify-center border-r-4 border-black">
-            <Image
+            <img
               src={petToDisplay.pictureurl || "/default-pet.jpg"}
               alt={petToDisplay.name}
               className="w-96 h-96 object-cover rounded-lg shadow-lg"
-              width={80}
-              height={80}
             />
           </div>
 

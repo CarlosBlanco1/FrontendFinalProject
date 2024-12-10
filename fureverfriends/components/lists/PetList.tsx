@@ -4,7 +4,6 @@ import { Pet } from "@/models/Pet";
 import Link from "next/link";
 import { useToastContext } from "../toasts/useToastContext";
 import ToastList from "../toasts/ToastList";
-import Image from 'next/image'
 
 export default function PetList({ pets }: { pets: Pet[] }) {
   const toastContext = useToastContext();
@@ -29,7 +28,7 @@ export default function PetList({ pets }: { pets: Pet[] }) {
                     className="rounded p-3 bg-gray-200 flex gap-2 text-black"
                   >
                     <div >
-                      <Image className="w-20 h-20 rounded-full font-semibold bg-white flex items-center justify-center text-gray-500 text-xl" src={pet.pictureurl!} alt=""></Image>
+                      <img className="w-20 h-20 rounded-full font-semibold bg-white flex items-center justify-center text-gray-500 text-xl" src={pet.pictureurl!} alt=""/>
                     </div>
                     <div className="flex flex-col justify-center">
                       <span className="text-lg font-semibold">

@@ -16,8 +16,9 @@ export default function NavItem({
     <Link href={link}>
       <div className="flex gap-1 items-center">
         <Image src={icon} alt={text} width={24} height={24} />
-        <p>{text}</p>
+        <p className="hidden lg:block">{text}</p>
       </div>
     </Link>
   );
 }
+

@@ -2,7 +2,6 @@
 
 import { Pet } from "@/models/Pet";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function HorizontalPetList() {
   const recentlyViewedPets: Pet[] = JSON.parse(
@@ -24,11 +23,10 @@ export default function HorizontalPetList() {
                 key={pet.id}
                 className="w-72 bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                <Image
-                  src={pet.pictureurl!}
+                <img src={pet.pictureurl!}
                   alt={pet.name}
-                  className="w-full h-48 object-cover rounded-t-lg mb-4"
-                />
+                  className="w-full h-48 object-cover rounded-t-lg mb-4">
+                    </img>
                 <h3 className="text-xl font-semibold text-white">{pet.name}</h3>
                 <p className="text-gray-300 text-sm">
                   {pet.animal} - {pet.breed}
