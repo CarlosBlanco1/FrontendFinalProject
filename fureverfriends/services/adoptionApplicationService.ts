@@ -1,3 +1,4 @@
+import { AdoptionApplication } from "@/models/AdoptionApplication";
 import { Pool } from "pg";
 
 const pool = new Pool({
@@ -10,26 +11,101 @@ const pool = new Pool({
 
 export const adoptionApplicationService = {
   createApplication: async ({
-    applicationId,
-    petId,
-    adopterId,
-    ownerId,
+    petid,
+    adopterid,
+    ownerid,
     message,
     status,
-    submittedAt,
+    submittedat,
   }: {
-    applicationId: string;
-    petId: string;
-    adopterId: string;
-    ownerId: string;
+    petid: string;
+    adopterid: string;
+    ownerid: string;
     message?: string;
     status: "pending" | "approved" | "rejected";
-    submittedAt: Date;
+    submittedat: Date;
   }) => {
-    await pool.query(`insert into AdoptionApplication
-        (applicationId, petId, adopterId, ownerId, message, status, submittedAt)
+    await pool.query(
+      `insert into AdoptionApplication
+        (petId, adopterId, ownerId, message, status, submittedAt)
         values
-        ($1, $2, $3, $4, $5, $6, $7)`
-    , [applicationId, petId, adopterId, ownerId, message, status, submittedAt])
+        ($1, $2, $3, $4, $5, $6)`,
+      [petid, adopterid, ownerid, message, status, submittedat]
+    );
+  },
+  getAllApplicationsForOwner: async ({ ownerId }: { ownerId: string }) => {
+    const res = await pool.query<AdoptionApplication>(
+      `
+            SELECT 
+              applicationId,
+              petId,
+              adopterId,
+              ownerId,
+              message,
+              status,
+              submittedAt
+            FROM AdoptionApplication
+            WHERE ownerId = $1
+          `,
+      [ownerId]
+    );
+    return res.rows;
+  },
+  getAllApplicationsForAdopter: async ({ adopterId }: { adopterId: string }) => {
+    const res = await pool.query<AdoptionApplication>(
+      `
+            SELECT 
+              applicationId,
+              petId,
+              adopterId,
+              ownerId,
+              message,
+              status,
+              submittedAt
+            FROM AdoptionApplication
+            WHERE adopterId = $1
+          `,
+      [adopterId]
+    );
+    return res.rows;
+  },
+  getApplicationWithId: async ({
+    applicationId,
+  }: {
+    applicationId: string;
+  }) => {
+    const res = await pool.query<AdoptionApplication>(
+      `
+      SELECT 
+        applicationId,
+        petId,
+        adopterId,
+        ownerId,
+        message,
+        status,
+        submittedAt
+      FROM AdoptionApplication
+      WHERE applicationId = $1
+      `,
+      [applicationId]
+    );
+
+    return res.rows[0]
+  },
+
+  updateApplicationStatus: async ({
+    applicationId,
+    newStatus,
+  }: {
+    applicationId: number;
+    newStatus: string;
+  }) => {
+
+    await pool.query(
+      `UPDATE AdoptionApplication
+      SET status = $1
+      WHERE applicationId = $2`,
+      [newStatus, applicationId]
+    );
   },
 };

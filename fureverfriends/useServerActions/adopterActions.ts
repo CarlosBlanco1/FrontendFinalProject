@@ -1,3 +1,5 @@
+"use server";
+
 import { Adopter } from "@/models/Adopter";
 import { adopterService } from "@/services/adopterService";
 import { revalidatePath } from "next/cache";

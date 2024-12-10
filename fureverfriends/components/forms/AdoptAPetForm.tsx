@@ -1,3 +1,5 @@
+"use client";
+
 import { Owner } from "@/models/Owner";
 import { Pet } from "@/models/Pet";
 import { ReusableForm } from "../reusables/input/ReusableForm";
@@ -20,16 +22,17 @@ export default function AdoptAPetForm({
   return (
     <>
       <ReusableForm
-        formTitle={`${petToAdopt.animal} Adoption Application Form`}
+        formTitle={`"${petToAdopt.name}" Adoption Application Form`}
+        buttonText="Submit Application Form"
         onSubmitFunction={handleSubmit}
         serializeForm={(e: React.FormEvent<HTMLFormElement>) => {
           const formData = new FormData(e.currentTarget);
 
           const application: AdoptionApplication = {
-            applicationId: "0",
-            petId: `${petToAdopt.id}`,
-            adopterId: `${petAdopter.id}`,
-            ownerId: `${petOwner.id}`,
+            applicationid: "0",
+            petid: `${petToAdopt.id}`,
+            adopterid: `${petAdopter.id}`,
+            ownerid: `${petOwner.id}`,
             message: `
         Adults in household and ages: ${formData.get("adults") as string}
         Children in household ang ages: ${formData.get("children") as string}
@@ -37,7 +40,7 @@ export default function AdoptAPetForm({
         Allergies: ${formData.get("allergy") as string}
         Care Provision: ${formData.get("provision") as string} `,
             status: "pending",
-            submittedAt: new Date(Date.now()),
+            submittedat: new Date(Date.now()),
           };
 
           return application;

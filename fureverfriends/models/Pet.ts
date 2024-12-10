@@ -5,6 +5,6 @@ export interface Pet {
   animal: string;
   breed: string;
   age: number;
-  pictureUrl?: string;
+  pictureurl?: string;
   description: string;
 }

@@ -12,7 +12,7 @@ export default function AddOwnerForm({
 }) {
   return (
     <>
-      <ReusableForm formTitle={"Add an owner"} onSubmitFunction={handleSubmit} serializeForm={formToOwner} successUrl={"ownersPage"}>
+      <ReusableForm formTitle={"Add an owner"} buttonText="Add New Owner" onSubmitFunction={handleSubmit} serializeForm={formToOwner} successUrl={"ownersPage"}>
         <ReusableTextInput
           label="First Name"
           name="firstName"

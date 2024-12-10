@@ -18,25 +18,22 @@ export async function validateAndGetUser() {
   };
 }
 
-export async function getAdopterAfterValidating(email: string) {
-  const adopters = await adopterService.getAllAdopters();
-  const adopter = adopters.find((adopter) => adopter.email == email);
-
-  if(adopter == undefined)
-  {
-    throw error("adopter not found!")
-  }
-
-  return adopter
-}
-
-export async function isRoleAssigned(email: string) {
+export async function getUserRoleAndObject(email: string) {
   const adopters = await adopterService.getAllAdopters();
   const owners = await ownerService.getAllOwners();
-  const users = adopters.concat(owners);
 
-  const user = users.find((u) => u.email == email);
-  return Boolean(user);
+  let userAdopter = adopters.find((a) => a.email == email);
+  let userOwner = owners.find((o) => o.email == email);
+
+  if (userAdopter) {
+    return { role: "Adopter", object: userAdopter };
+  }
+
+  if (userOwner) {
+    return { role: "Owner", object: userOwner };
+  }
+
+  throw error("user is not registered")
 }
 
 export async function Validate() {
@@ -45,17 +42,16 @@ export async function Validate() {
 
   const JWKS = jose.createRemoteJWKSet(
     new URL(
-      "https://auth.snowse.duckdns.org/realms/advanced-frontend/protocol/openid-connect/certs"
+      "https://auth.snowse.duckdns.org/realms/carlos-final/protocol/openid-connect/certs"
     )
   );
 
   if (!jwt) {
-    console.log("jwt is undefined");
-    return undefined;
+    throw error("jwt is undefined");
   }
 
   const { payload } = await jose.jwtVerify(jwt, JWKS, {
-    issuer: "https://auth.snowse.duckdns.org/realms/advanced-frontend",
+    issuer: "https://auth.snowse.duckdns.org/realms/carlos-final",
     audience: "account",
   });
 

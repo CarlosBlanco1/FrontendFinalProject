@@ -1,9 +1,9 @@
 export interface AdoptionApplication {
-  applicationId: string;
-  petId: string;
-  adopterId: string;
-  ownerId: string;
+  applicationid: string;
+  petid: string;
+  adopterid: string;
+  ownerid: string;
   message?: string;
   status: "pending" | "approved" | "rejected";
-  submittedAt: Date;
+  submittedat: Date;
 }

@@ -30,7 +30,6 @@ export const ownerService = {
     phone,
     address,
   }: {
-    id: string;
     firstname: string;
     lastname: string;
     email: string;
@@ -46,33 +45,4 @@ export const ownerService = {
       [firstname, lastname, email, phone, address]
     );
   },
-
-  //   editUser: async (userId: number, updatedUser: Partial<DirectoryUser>): Promise<DirectoryUser | null> => {
-  //     // Ensure we are not updating the primary key
-  //     if (updatedUser.id !== undefined) {
-  //         delete updatedUser.id; // Prevent changing the ID
-  //     }
-
-  //     // Prepare the fields for the update query
-  //     const fields = Object.keys(updatedUser).map((key, index) => `${key} = $${index + 2}`).join(', ');
-
-  //     // If no fields to update, return null
-  //     if (fields.length === 0) {
-  //         return null; // No updates to make
-  //     }
-
-  //     // Create the query
-  //     const query = `
-  //       UPDATE directory_user
-  //       SET ${fields}
-  //       WHERE id = $1
-  //       RETURNING *
-  //     `;
-
-  //     // Execute the query
-  //     const res = await pool.query<DirectoryUser>(query, [userId, ...Object.values(updatedUser)]);
-
-  //     // Return the updated user or null if not found
-  //     return res.rows.length > 0 ? res.rows[0] : null;
-  // }
 };

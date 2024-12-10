@@ -5,12 +5,14 @@ import { useRouter } from "next/navigation";
 
 export function ReusableForm({
   formTitle,
+  buttonText,
   onSubmitFunction,
   serializeForm,
   children,
   successUrl,
 }: {
   formTitle: string;
+  buttonText: string;
   onSubmitFunction: (obj: any) => Promise<void>;
   serializeForm: (event: React.FormEvent<HTMLFormElement>) => any;
   children: React.ReactNode;
@@ -39,15 +41,16 @@ export function ReusableForm({
 
           router.push(`/${successUrl}`);
         }}
-        className="bg-white flex flex-col gap-4 py-8 px-9"
+        className="bg-white flex flex-col gap-4 py-8 px-9 text-black"
       >
-        <h2 className="text-black text-xl self-center">{formTitle}</h2>
+        <h2 className="text-black text-xl self-center font-bold">{formTitle}</h2>
+        <hr className="border-t-3 border-black w-full"></hr>
         {children}
         <button
-          className="bg-yellow-400 p-3 text-lg text-black rounded-lg hover:bg-yellow-500 transition"
           type="submit"
+          className="text-yellow-500 border border-yellow-500 hover:text-white hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center transition-all duration-300 ease-in-out"
         >
-          Submit Form
+          {buttonText}
         </button>
       </form>
     </>

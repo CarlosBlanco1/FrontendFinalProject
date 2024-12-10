@@ -6,7 +6,7 @@ import { ownerService } from "@/services/ownerService";
 import { petService } from "@/services/petService";
 import { createAdoptionApplication } from "@/useServerActions/adoptionApplicationActions";
 import {
-  getAdopterAfterValidating,
+  getUserRoleAndObject,
   validateAndGetUser,
 } from "@/useServerActions/tokenValidation";
 
@@ -32,7 +32,7 @@ export default async function PetAdoptionFormPage(props: {
 
   try {
 
-    petAdopter = await getAdopterAfterValidating(validatedUser.email);
+    petAdopter = (await getUserRoleAndObject(validatedUser.email)).object;
   }
   catch(error)
   {
@@ -43,6 +43,10 @@ export default async function PetAdoptionFormPage(props: {
         </div>
     </>
   }
+
+  console.log(petAdopter)
+  console.log(petToAdopt)
+  console.log(petOwner)
 
   return (
     <>

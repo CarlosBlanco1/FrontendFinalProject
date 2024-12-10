@@ -12,7 +12,6 @@ export default function PeopleList({
   people: Owner[] | Adopter[];
 }) {
   const toastContext = useToastContext();
-  console.log((people[0] as Owner).address ? "Owner" : "Adopter");
 
   const isOwner = Boolean((people[0] as Owner).address);
 
