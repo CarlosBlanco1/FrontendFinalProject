@@ -122,5 +122,5 @@ Self Evaluation:
 ## Due Dec 4 - Final Review and Project Completion
 | Feature                                           | Score (/3) | Completed |
 |---------------------------------------------------|------------|-----------|
-| Documentation and Code Cleanup                    | []         | [ ]       |
-| Final Deployment and QA                           | []         | [ ]       |
+| Documentation and Code Cleanup                    | [1]         | [X]       |
+| Final Deployment and QA                           | [2]         | [X]       |
