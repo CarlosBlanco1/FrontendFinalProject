@@ -8,7 +8,7 @@ export default function formToPet(event: React.FormEvent<HTMLFormElement>) {
         name: formData.get("name") as string,
         breed: formData.get("breed") as string,
         age: formData.get("age") as string,
-        pictureUrl: formData.get("pictureurl") as string,
+        pictureurl: formData.get("pictureurl") as string,
         description: formData.get("description") as string
     };
 }
