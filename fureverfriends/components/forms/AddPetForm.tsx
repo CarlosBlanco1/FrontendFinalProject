@@ -46,7 +46,7 @@ export default function AddPetForm({
           placeholder="i.e., 1, 2, 3, 4, 5"
         />
         <ReusableTextInput
-          label="Provide a picture url for your pet xd"
+          label="Provide a picture url for your pet"
           name="pictureurl"
           placeholder="i.e., https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg"
         />

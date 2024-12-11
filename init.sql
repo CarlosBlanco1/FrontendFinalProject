@@ -52,9 +52,9 @@ VALUES
 
 INSERT INTO Pet (ownerId, animal, name, breed, age, pictureUrl, description)
 VALUES
-(1, 'dog', 'Princess', 'Labrador', 3, 'https://example.com/dog.jpg', 'Friendly and loves people'),
-(1, 'cat', 'Tao', 'Siamese', 2, 'https://example.com/cat.jpg', 'Curious and playful'),
-(2, 'rabbit', 'Bugs', 'Dutch', 1, 'https://example.com/rabbit.jpg', 'Small, calm, and great for kids');
+(1, 'dog', 'Princess', 'Labrador', 3, 'https://cdn.britannica.com/82/232782-050-8062ACFA/Black-labrador-retriever-dog.jpg', 'Friendly and loves people'),
+(1, 'cat', 'Tao', 'Siamese', 2, 'https://www.metlifepetinsurance.com/content/dam/metlifecom/us/metlifepetinsurance/the-siamese-cat-min.webp', 'Curious and playful'),
+(2, 'rabbit', 'Bugs', 'Dutch', 1, 'https://cdn.shopify.com/s/files/1/0779/5136/9553/files/D188EFAF-137B-48AD-8E73-097BB23EC40D-1024x778-1.jpg?v=1714913448', 'Small, calm, and great for kids');
 
 INSERT INTO AdoptionApplication (petId, adopterId, ownerId, message, status, submittedAt)
 VALUES
