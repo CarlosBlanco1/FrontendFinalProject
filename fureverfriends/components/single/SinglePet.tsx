@@ -35,7 +35,10 @@ export default function SinglePet({
 
   const petOwner = owners.find(
     (owner) => Number(owner.id) == petToDisplay.ownerid
+
   );
+  
+  console.log(petToDisplay)
 
   return (
     <>
